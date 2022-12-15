@@ -8,7 +8,7 @@
 %%%         Fisiologia, Facultad de Medicina, Montevideo, Uruguay.
 %%% VERSION:        December 2022
 %%%
-%%% Necessary Functions: PCIst; dimensionality_reduction; replace_bad_channels
+%%% Necessary Functions:replace_bad_channels; PCIst; dimensionality_reduction
 %% 
 %close all
 clear all
@@ -16,8 +16,8 @@ clc
 tic
 
 %% load the data and define parameters 
-
-load('ERPD_imec1_Sevo_lf.mat');
+save_name = ('PCIst_Wake');
+load('ERPD_imec1_Wake.mat'); %% load preprocessed data (channels x samples x trials)
 RCh = 293; % reference channel 
 Cx_list = (295:375); % list of cortical channels 
 ntrials = (1:83); % maximum number of trials shared by the 3 states
@@ -113,4 +113,5 @@ legend('Boxoff')
 line([0, 0], ylim, 'Color', 'k','LineStyle','--','LineWidth', 1); % 'LineWidth', 2
 
 %%
+print(gcf,[save_name, '.jpg'],'-djpeg','-r300'); 
 toc
