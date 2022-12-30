@@ -1,4 +1,4 @@
-# Cavelli-et-al-PCIst
+# Cavelli-Mao-2022
 Sleep/wake changes in perturbational complexity in rats and mice
 
 Matias Lorenzo Cavelli1,3#, Rong Mao1,2#, Graham Findlay1,2, Kort Driessen1,2, Tom Bugnon1, Giulio Tononi1*, Chiara Cirelli1*
